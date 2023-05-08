@@ -1,37 +1,13 @@
 from flask import Flask, render_template
+from database import load_jobs_from_db
 
 app = Flask(__name__)
-JOBS = [{
-  'id': 1,
-  'title': ' Plant operator',
-  'location': ' Chandrapur, Maharashtra, India ',
-  'salary': ' Rs.22,000'
-}, {
-  'id': 2,
-  'title': '  Welder',
-  'location': ' Chandrapur, Maharashtra, India',
-  'salary': ' Rs.15,000'
-}, {
-  'id': 3,
-  'title': ' Weibgh Bridge Operater',
-  'location': ' Chandrapur, Maharashtra, India',
-  'salary': ' Rs.12,000'
-}, {
-  'id': 4,
-  'title': ' Maintenance technician',
-  'location': ' Chandrapur, Maharashtra, India ',
-  'salary': ' Rs.20,000'
-}, {
-  'id': 5,
-  'title': ' Industrial electrician',
-  'location': ' Chandrapur, Maharashtra, India ',
-  'salary': ' Rs.28,000'
-}]
 
 
 @app.route('/')
 def home():
-  return render_template('home.html', jobs=JOBS)
+  jobs = load_jobs_from_db()
+  return render_template('home.html', jobs=jobs)
 
 
 if __name__ == '__main__':
