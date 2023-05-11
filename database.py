@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
+import os
 
-connection_string = "mysql+mysqlconnector://9gpfwx0bbncomvgv9lu6:pscale_pw_49HbTN1Sgwwxe3zkZt6gQ1VYAQoF2cfrA28Jaq08h73@aws.connect.psdb.cloud/careers_website?charset=utf8mb4"
+connection_string = os.environ['CONNECTION_STRING']
 engine = create_engine(connection_string, echo=True)
 
 
