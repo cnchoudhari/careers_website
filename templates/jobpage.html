@@ -19,22 +19,22 @@
  
   <h4> Location</h4>
   <p class="lead mt-0"> {{job.location}}</p>
-  
+  <div>
   <h4> Responsibilities</h4>
     <ul>
-
-      {% for line in job.responsibities.split("\n") %}
-      <li>{{line}}</li>
+      {% for line in job.responsibities.split('\\n') %}
+         <li> {{line}} </li>
       {% endfor %}
     </ul>
-
+  </div>
+    <div>
   <h4> Requirements</h4>
     <ol>
        {% for line in job.requirement.split("\n") %}
-      <li>{{line}}</li>
+         <li>{{line}}</li>
       {% endfor %}
     </ol>
-
+    </div>
   
     <h4> salary </h4>
   <p> {{ job.currency}} {{ job.salary}}</p> 
