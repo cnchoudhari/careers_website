@@ -26,7 +26,7 @@ def apply_to_job(id):
 
   add_application_to_db(id, data)
 
-  return render_template('app_submitted.html', application=data, job=job)
+  return render_template('app_submitted.html', applications=data, job=job)
 
 
 if __name__ == '__main__':
