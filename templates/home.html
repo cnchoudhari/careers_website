@@ -13,10 +13,14 @@
     
   
   <h1 class="text-center mt-2 mb-4 ">NNF MERCANTILE.PVT LTD</h1>
- 
- {% include 'banner.html'%} 
 
-  <h2 class="text-center mt-2 mb-4 "> About NNF Mercantile </h2>
+   {% include 'banner.html'%} 
+
+ <div class="text-center mt-4 mb-4 "> 
+
+  <h2 style="text-align:center"> About NNF Mercantile </h2> <br>
+   
+</div>
   <div class="row" style="margin-bottom:16px">
     <div class="col-md-8">
   <P class="lead">
@@ -29,8 +33,9 @@
   </P>
     </div>
     <div class="d-none d-md-block col-md-4">
-     <img  id="img" class="img-fluid" src="static/banner3.jpg" style="height:350px;  border-radius:4px;"> 
+     <img  id="img" class="img-fluid" src="static/banner3.jpg" style="height:330px;  border-radius:4px;"> 
   </div>
+    
   <h2 class="text-center mt-2 mb-4 "> job Opening</h2>
   <div class="lead">
     {% for job in jobs %}
