@@ -1,44 +1,119 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    
-  <div>
-<h4 style="text-align:center">Application Form </h4>
 
-<form method="post" action="/job/{{job['id']}}/apply" > 
-  <div class="mb-2">
-  <label>Full Name</label><br>
-  <input type= "text" name="full_name">
-</div>
-  
-  <div class="mb-2">
-  <label> Email</label><br>
-  <input type="text" name="email" placeholder="abc@gmail.com">
-  </div>
-  
-   <div class="mb-2">
-  <label> LinkedIn URL</label><br>
-  <input type="text" name="linkedin_url" placeholder="https://linked.com/in/abc@">
-  </div>
+  <div class="container " >
+    <div class="row align-items-center ">
+        <div class="mb-3">
+          <h4>Application Form </h4>
+        </div>
+      </div>
 
-  <div class="mb-2">
-  <label> Education</label><br>
-  <textarea name="education"></textarea>
-  </div>
-  
-   <div class="mb-2">
-  <label> Work Experience </label><br>
-  <textarea name="work_experience"></textarea>
-  </div>
 
-  <div class="mb-2">
-  <label> Resume URL </label><br>
-  <input name="resume_url">
-  </div>
-  
-  <input type="submit" value="submit" >
-  
-</form>
+    <form class=" was-validated" method="post" action="/job/{{job['id']}}/apply" > 
+
+  <!-- full_name -->
+
+  <div class="row align-items-center ">
+      <div class="col-4">
+        <div class="mb-3">
+      <label for="validationTooltip01" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="fullname" required name="full_name"> 
+      <div class="invalid-feedback">
+        Please enter full Name.
+      </div>
     </div>
-  </body>
-</html>
+    </div>
+    </div>
+
+    <!-- email  -->
+
+  <div class="row align-items-center">
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">EmailL</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="abc@gmail.com" required name="email">
+          <div class="invalid-feedback">
+            Please enter valid Email Address.
+          </div>
+        </div>  
+      </div>
+      </div>
+
+    <!-- LinkedIn URL -->  
+
+      <div class="row align-items-center">
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">LinkedIn URL</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="https://linked.com/in/abc@" required name="linkedin_url" >
+            <div class="invalid-feedback">
+              Please enter valid LinkedIn URL .
+            </div>
+          </div>    
+        </div>
+        </div>
+
+        <!-- Education -->
+
+        <div class="row align-items-center">
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label">Education</label>
+              <textarea class="form-control is-invalid " id="validationTextarea" rows="3" required name="education"></textarea>
+              <div class="invalid-feedback">
+                Please enter Educationin Textarea.
+              </div>
+              </div>
+            </div>    
+          </div>
+  
+
+          <!-- Work Experience -->
+
+          <div class="row align-items-center">
+            <div class="col-4">
+              <div class="mb-3">
+                <label for="validationTextarea" class="form-label">Work Experience</label>
+                <textarea class="form-control is-invalid " id="validationTextarea" rows="3" required name="work_experience"></textarea>
+                <div class="invalid-feedback">
+                  Please enter Work Experience in Textarea.
+                </div>
+              </div> 
+            </div>
+            </div>        
+           <!-- Resume URL  -->    
+
+           <div class="row align-items-center">
+          <div class="col-4">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Resume URL</label>
+            <input type="text" class="form-control is-invalid" id="exampleFormControlInput1" placeholder="" required name="resume_url" >
+            <div class="invalid-feedback">
+              Please enter Resume URl .
+            </div>
+          </div>    
+        </div>
+        </div>
+
+        <!-- checkbox -->
+        <div class="row align-items-center">
+          <div class="col-4">
+          <div class="mb-3">
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+              <label class="form-check-label" for="validationFormCheck1">Agree to terms and conditions</label>
+              <div class="invalid-feedback">You must check information  before submitting</div>
+            </div>
+          </div>    
+        </div>
+        </div>
+
+           <!-- submit_button -->
+           <div class="row align-items-left">
+            <div class="col-4">
+              <div class="mb-3">
+                <button type="button" class="btn btn-outline-success btn-lg" value="submit">Submit</button>
+
+              </div>
+            </div>
+            </div>
+          </form>
+          </div>
