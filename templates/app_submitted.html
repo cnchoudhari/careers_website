@@ -7,43 +7,90 @@
 <body>
   {% include 'navbar.html'%} 
 
-
-
-  <div class="container" >  
   <h1 class="text-center mt-2 mb-4 ">NNF MERCANTILE.PVT LTD</h1>
 
      {% include 'banner.html'%} 
 
+   
+    <div class="mb-3 d-flex justify-content-left">
     <p>
-      Your Application for The Role of <b>"{{job['title']}}"</b> at NNF has been Submitted!
-    </p>
+        Your Application for The Role of <b>"{{job['title']}}"</b> at NNF has been Submitted!
+      </p>
+    </div>
 
-<b>Full Name </b>
-  <div class="mb-2">
-    {{application['full_name']}}
-  </div>
-  <b>Email</b>
-  <div class="mb-2">
-    {{application['email']}}
-  </div>
-  <b>LinkedIn URL</b>
-  <div class="mb-2">
-    {{application['linkedin_url']}}
-  </div>
-  <b>Education</b>
-  <div class="mb-2">
-    {{application['education']}}
-  </div>
-  <b>Work Experience </b>
-  <div class="mb-2">
-    {{application['work_experience']}}
-  </div>
-  <b>Resume</b>
-  <div class="mb-2">
-    {{application['resume_url']}}
-  </div>
-  </div>
-  
+
+    <div class="container ">
+        <div class="row align-items-center ">
+            <div class="col-sm-4 mb-3">
+              <b>Full Name </b>
+            </div>
+         
+         <div class="col">   {{application['full_name']}} </div>
+          </div>
+        
+      
+          <!-- email  -->
+
+         
+            <div class="row align-items-center ">
+                <div class="col-sm-4 mb-3">
+                    <b>Email</b>
+                </div>
+             
+             <div class="col">{{application['email']}}</div>
+              </div>
+              
+
+
+          
+
+          <!-- LinkedIn URL -->  
+          
+            <div class="row align-items-center ">
+                <div class="col-sm-4 mb-3">
+                    <b>LinkedIn URL</b>
+                </div>
+             
+             <div class="col">{{application['linkedin_url']}}</div>
+              </div>
+              
+
+      
+              <!-- Education -->
+
+              
+                <div class="row align-items-center ">
+                    <div class="col-sm-4 mb-3">
+                        <b>Education</b>
+                    </div>
+                 
+                 <div class="col"> {{application['education']}}</div>
+                  </div>
+                  
+                <!-- Work Experience -->
+
+              
+                    <div class="row align-items-center ">
+                        <div class="col-sm-4 mb-3">
+                            <b>Work Experience </b>
+                        </div>
+                     
+                     <div class="col"> {{application['work_experience']}}</div>
+                      </div>
+                      
+
+                 <!-- Resume URL  -->   
+                 
+                    <div class="row align-items-center ">
+                        <div class="col-sm-4 mb-3">
+                            <b>Resume</b>
+                        </div>
+                     
+                     <div class="col">  {{application['resume_url']}}
+                    </div>
+                      </div>
+                      
+         </div>
    {% include 'footer.html'%}
 
 </body>
